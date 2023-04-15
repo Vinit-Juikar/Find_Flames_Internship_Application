@@ -1,11 +1,26 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:find_flames_internship_application/widgets/appbar.dart';
+import 'package:find_flames_internship_application/widgets/list_of_people_on_home_screen.dart';
+import 'package:find_flames_internship_application/widgets/searchBar_and_messages.dart';
+import 'package:flutter/material.dart';
+
+
 
 class MainHomeScreen extends StatelessWidget {
   const MainHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Color(0xFFF5F5F5),
+      appBar: AppBarForHomeScreen(),
+      body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          listOfFriendsOnHomeScreen(),
+          searchBarAndMessages(),
+
+        ],
+      ),
+    );
   }
 }
