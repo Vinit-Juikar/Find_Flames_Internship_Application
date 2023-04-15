@@ -12,7 +12,7 @@ AppBar AppBarForHomeScreen() {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 0),
             child: Image.asset("assets/images/Ellipse 2.png"),
           ),
           Spacer(),
@@ -28,8 +28,8 @@ AppBar AppBarForHomeScreen() {
           Spacer(),
           Container(
             margin: EdgeInsets.only(right: 20),
-            child: const Icon(
-              Icons.settings,
+            child: Image.asset(
+             "assets/icons/More.png",
               color: Color(0xFF505050),
             ),
           )
