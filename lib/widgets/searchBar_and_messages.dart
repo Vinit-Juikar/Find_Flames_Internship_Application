@@ -17,8 +17,9 @@ class searchBarAndMessages extends StatelessWidget {
       child: Stack(
         children: const [
           Positioned(
-            top:30,
-            child: messages()),
+            top: 30,
+            child: messages(),
+          ),
           searchBar(),
         ],
       ),

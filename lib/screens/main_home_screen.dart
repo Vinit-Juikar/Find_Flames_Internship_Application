@@ -3,8 +3,6 @@ import 'package:find_flames_internship_application/widgets/list_of_people_on_hom
 import 'package:find_flames_internship_application/widgets/searchBar_and_messages.dart';
 import 'package:flutter/material.dart';
 
-
-
 class MainHomeScreen extends StatelessWidget {
   const MainHomeScreen({super.key});
 
@@ -14,11 +12,9 @@ class MainHomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFFFF6FA),
       appBar: AppBarForHomeScreen(),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           listOfFriendsOnHomeScreen(),
           const searchBarAndMessages(),
-
         ],
       ),
     );

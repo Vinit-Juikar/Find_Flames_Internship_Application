@@ -34,10 +34,7 @@ class messages extends StatelessWidget {
         ),
         Expanded(
           child: Divider(
-              endIndent: 25,
-              thickness: 20.0,
-              height: 30,
-              color: Colors.black),
+              endIndent: 25, thickness: 20.0, height: 30, color: Colors.black),
         )
       ],
     );
@@ -52,7 +49,6 @@ class messages extends StatelessWidget {
       String Notification) {
     return Container(
       margin: EdgeInsets.only(top: Notification == "1" ? 50 : 15),
-      // color: Colors.pink,
       height: 80.h,
       width: ScreenUtil().screenWidth,
       child: Stack(
@@ -65,7 +61,7 @@ class messages extends StatelessWidget {
               ImageForMessages,
               fit: BoxFit.contain,
             ),
-          ), //for image
+          ),
           Positioned(
               left: 125,
               top: 15,
@@ -82,7 +78,9 @@ class messages extends StatelessWidget {
                         Text(
                           Name,
                           style: GoogleFonts.nunito(
-                              color: Name == "Tim" ? const Color(0xFF818181): const Color(0xFF505050),
+                            color: Name == "Tim"
+                                ? const Color(0xFF818181)
+                                : const Color(0xFF505050),
                             textStyle: const TextStyle(fontSize: 20),
                           ),
                         ),
@@ -98,28 +96,31 @@ class messages extends StatelessWidget {
             child: Text(
               Message,
               style: GoogleFonts.nunito(
-                color: Name == "Tim" ? const Color(0xFF818181):
-                Name == "James"? const Color(0xFFFF5F8F):
-                const Color(0xFF505050),
-                 
+                color: Name == "Tim"
+                    ? const Color(0xFF818181)
+                    : Name == "James"
+                        ? const Color(0xFFFF5F8F)
+                        : const Color(0xFF505050),
                 fontStyle: Message == "Typing..."
                     ? FontStyle.italic
                     : FontStyle.normal,
                 textStyle: const TextStyle(fontSize: 16),
               ),
             ),
-          ), //for verification
+          ),
           Positioned(
             right: 40,
             top: 20,
             child: Text(
               Time,
               style: GoogleFonts.nunito(
-                  color: Name == "Tim" ? const Color(0xFF818181): const Color(0xFF505050),
+                color: Name == "Tim"
+                    ? const Color(0xFF818181)
+                    : const Color(0xFF505050),
                 textStyle: const TextStyle(fontSize: 12),
               ),
             ),
-          ), //for message
+          ),
           Notification == ""
               ? Container()
               : Positioned(
@@ -138,16 +139,16 @@ class messages extends StatelessWidget {
                       child: Text(
                         Notification,
                         style: GoogleFonts.nunito(
-                          fontWeight: FontWeight.w700,color: Color(0xFFFFFFFF),
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFFFFFFFF),
                           textStyle: const TextStyle(fontSize: 12),
                         ),
                       ),
                     ),
                   ),
-                ), //for date
-          // DividerForMessages(), //for messages
+                ),
           Positioned.fill(
-            bottom: -100, // to overlap the divider below
+            bottom: -100,
             child: Row(
               children: const [
                 Expanded(
@@ -168,7 +169,7 @@ class messages extends StatelessWidget {
                 ),
               ],
             ),
-          ), //for border
+          ),
         ],
       ),
     );
@@ -179,7 +180,6 @@ class messages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.symmetric(horizontal: 30),
       height: ScreenUtil().screenHeight,
       width: ScreenUtil().screenWidth,
       decoration: const BoxDecoration(

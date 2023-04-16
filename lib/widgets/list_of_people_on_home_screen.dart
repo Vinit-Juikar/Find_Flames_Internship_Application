@@ -8,7 +8,6 @@ Widget listOfFriendsOnHomeScreen() {
     margin: const EdgeInsets.symmetric(vertical: 20),
     height: 140.h,
     width: double.infinity,
-    // color: Colors.black,
     child: ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: 4,
@@ -35,8 +34,9 @@ Widget listOfFriendsOnHomeScreen() {
                       Radius.circular(10),
                     ),
                     child: Image.asset(
-                      ImagesForHomeScreen[index],alignment: Alignment.centerLeft,
-                      fit:index == 3? BoxFit.contain: BoxFit.cover,
+                      ImagesForHomeScreen[index],
+                      alignment: Alignment.centerLeft,
+                      fit: index == 3 ? BoxFit.contain : BoxFit.cover,
                     ),
                   ),
                 ),
@@ -61,9 +61,7 @@ Widget listOfFriendsOnHomeScreen() {
                             NamesForHomeScreen[index],
                             style: GoogleFonts.nunito(
                               textStyle: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500
-                              ),
+                                  fontSize: 12, fontWeight: FontWeight.w500),
                             ),
                           ),
                           index > 0
@@ -114,7 +112,7 @@ Widget listOfFriendsOnHomeScreen() {
                           ),
                         ),
                       )
-                    : Container()
+                    : Container(),
               ],
             ),
           ),
