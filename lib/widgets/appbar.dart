@@ -21,6 +21,7 @@ AppBar AppBarForHomeScreen() {
             style: GoogleFonts.nunito(
               textStyle: const TextStyle(
                 fontSize: 20,
+                fontWeight: FontWeight.w400,
                 color: Color(0xFFFF5F8F),
               ),
             ),

@@ -78,6 +78,7 @@ class messages extends StatelessWidget {
                   ? Text(
                       Name,
                       style: GoogleFonts.nunito(
+                        fontWeight: FontWeight.w400,
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                     )
@@ -86,6 +87,7 @@ class messages extends StatelessWidget {
                         Text(
                           Name,
                           style: GoogleFonts.nunito(
+                              color: Name == "Tim" ? Color(0xFF818181): Color(0xFF505050),
                             textStyle: const TextStyle(fontSize: 20),
                           ),
                         ),
@@ -102,6 +104,10 @@ class messages extends StatelessWidget {
               child: Text(
                 Message,
                 style: GoogleFonts.nunito(
+                  color: Name == "Tim" ? Color(0xFF818181):
+                  Name == "James"? Color(0xFFFF5F8F):
+                  Color(0xFF505050),
+                   
                   fontStyle: Message == "Typing..."
                       ? FontStyle.italic
                       : FontStyle.normal,
@@ -116,6 +122,7 @@ class messages extends StatelessWidget {
             child: Text(
               Time,
               style: GoogleFonts.nunito(
+                  color: Name == "Tim" ? Color(0xFF818181): Color(0xFF505050),
                 textStyle: const TextStyle(fontSize: 12),
               ),
             ),
@@ -123,7 +130,7 @@ class messages extends StatelessWidget {
           Notification == ""
               ? Container()
               : Positioned(
-                  right: 52,
+                  right: 45,
                   top: 40,
                   child: Container(
                     height: 17.h,

@@ -34,7 +34,7 @@ class searchBar extends StatelessWidget {
                   child: Text(
                     "Search",
                     style:
-                        GoogleFonts.nunito(textStyle: TextStyle(fontSize: 18)),
+                        GoogleFonts.nunito(textStyle: TextStyle(fontSize: 18),fontWeight: FontWeight.w400),
                   ),
                 )
               ],

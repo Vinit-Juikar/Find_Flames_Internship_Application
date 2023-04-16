@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget listOfFriendsOnHomeScreen() {
   return Container(
-    margin: EdgeInsets.symmetric(vertical: 20),
+    margin: const EdgeInsets.symmetric(vertical: 20),
     height: 140.h,
     width: double.infinity,
     // color: Colors.black,
@@ -15,35 +15,43 @@ Widget listOfFriendsOnHomeScreen() {
       itemBuilder: (context, index) {
         return Center(
           child: Container(
-            margin: EdgeInsets.symmetric(
+            margin: const EdgeInsets.symmetric(
               horizontal: 7,
             ),
             height: 110.h,
             width: 90.w,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10))),
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
             child: Stack(
               children: [
-                Container(
+                SizedBox(
                   height: 100.h,
                   width: 90.w,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                     child: Image.asset(
                       ImagesForHomeScreen[index],
                       fit: BoxFit.cover,
                     ),
                   ),
-                ), // this is for image
+                ),
                 Positioned(
                   left: 10,
                   bottom: 0,
                   child: Container(
                     height: 20.h,
                     width: 70.w,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
                     child: Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -52,15 +60,16 @@ Widget listOfFriendsOnHomeScreen() {
                           Text(
                             NamesForHomeScreen[index],
                             style: GoogleFonts.nunito(
-                              textStyle: TextStyle(
+                              textStyle: const TextStyle(
                                 fontSize: 12,
+                                fontWeight: FontWeight.w500
                               ),
                             ),
                           ),
                           index > 0
                               ? Container(
                                   height: 10.h,
-                                  margin: EdgeInsets.only(left: 5),
+                                  margin: const EdgeInsets.only(left: 5),
                                   child: Image.asset(
                                     "assets/icons/BlueTick.png",
                                     fit: BoxFit.cover,
@@ -71,7 +80,41 @@ Widget listOfFriendsOnHomeScreen() {
                       ),
                     ),
                   ),
-                ), 
+                ),
+                index == 0
+                    ? Positioned(
+                        top: 37,
+                        left: 30,
+                        child: Container(
+                          height: 22.25.h,
+                          width: 25.w,
+                          child: Image.asset(
+                            "assets/icons/Heart.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
+                    : Container(),
+                index == 0
+                    ? Positioned(
+                        top: 70,
+                        left: 30,
+                        child: Container(
+                          height: 22.25.h,
+                          width: 25.w,
+                          child: Text(
+                            "20",
+                            style: GoogleFonts.nunito(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    : Container()
               ],
             ),
           ),
