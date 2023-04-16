@@ -1,21 +1,23 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar AppBarForHomeScreen() {
   return AppBar(
-    backgroundColor: Color(0xFFFFF6FA),
+    backgroundColor: const Color(0xFFFFF6FA),
     toolbarHeight: 60.h,
     elevation: 0,
     title: Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 0),
+            margin: const EdgeInsets.only(left: 0),
             child: Image.asset("assets/images/Ellipse 2.png"),
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             "Find Flames",
             style: GoogleFonts.nunito(
@@ -26,12 +28,12 @@ AppBar AppBarForHomeScreen() {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
-            margin: EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 20),
             child: Image.asset(
              "assets/icons/More.png",
-              color: Color(0xFF505050),
+              color: const Color(0xFF505050),
             ),
           )
         ],

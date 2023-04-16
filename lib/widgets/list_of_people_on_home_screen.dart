@@ -35,8 +35,8 @@ Widget listOfFriendsOnHomeScreen() {
                       Radius.circular(10),
                     ),
                     child: Image.asset(
-                      ImagesForHomeScreen[index],
-                      fit: BoxFit.cover,
+                      ImagesForHomeScreen[index],alignment: Alignment.centerLeft,
+                      fit:index == 3? BoxFit.contain: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -85,7 +85,7 @@ Widget listOfFriendsOnHomeScreen() {
                     ? Positioned(
                         top: 37,
                         left: 30,
-                        child: Container(
+                        child: SizedBox(
                           height: 22.25.h,
                           width: 25.w,
                           child: Image.asset(
@@ -99,13 +99,13 @@ Widget listOfFriendsOnHomeScreen() {
                     ? Positioned(
                         top: 70,
                         left: 30,
-                        child: Container(
+                        child: SizedBox(
                           height: 22.25.h,
                           width: 25.w,
                           child: Text(
                             "20",
                             style: GoogleFonts.nunito(
-                              textStyle: TextStyle(
+                              textStyle: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xFFFFFFFF),

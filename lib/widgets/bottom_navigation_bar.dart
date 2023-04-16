@@ -31,7 +31,7 @@ class _BottomNavigationBarForHomeScreenState
     return Scaffold(
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFFFFF),
         items: [
           BottomNavigationBarItem(
             icon: Image.asset("assets/images/image-removebg-preview.png",scale: 5,),

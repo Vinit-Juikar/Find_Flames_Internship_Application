@@ -1,14 +1,12 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, camel_case_types
 
-import 'package:find_flames_internship_application/data/list_for_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class messages extends StatelessWidget {
   Widget ContainerforMessages() {
-    return Container(
+    return SizedBox(
       height: 150.h,
       width: ScreenUtil().screenWidth,
       child: Row(
@@ -24,27 +22,24 @@ class messages extends StatelessWidget {
   }
 
   Widget DividerForMessages() {
-    return Container(
-      // margin: EdgeInsets.symmetric(horizontal: 10),
-      child: Row(
-        children: const [
-          Expanded(
-            child: Divider(
-              indent: 25,
+    return Row(
+      children: const [
+        Expanded(
+          child: Divider(
+            indent: 25,
+            thickness: 20.0,
+            height: 30,
+            color: Colors.black,
+          ),
+        ),
+        Expanded(
+          child: Divider(
+              endIndent: 25,
               thickness: 20.0,
               height: 30,
-              color: Colors.black,
-            ),
-          ),
-          Expanded(
-            child: Divider(
-                endIndent: 25,
-                thickness: 20.0,
-                height: 30,
-                color: Colors.black),
-          )
-        ],
-      ),
+              color: Colors.black),
+        )
+      ],
     );
   }
 
@@ -87,11 +82,11 @@ class messages extends StatelessWidget {
                         Text(
                           Name,
                           style: GoogleFonts.nunito(
-                              color: Name == "Tim" ? Color(0xFF818181): Color(0xFF505050),
+                              color: Name == "Tim" ? const Color(0xFF818181): const Color(0xFF505050),
                             textStyle: const TextStyle(fontSize: 20),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 4,
                         ),
                         Image.asset(VerificationMark),
@@ -100,19 +95,17 @@ class messages extends StatelessWidget {
           Positioned(
             top: 45,
             left: 125,
-            child: Container(
-              child: Text(
-                Message,
-                style: GoogleFonts.nunito(
-                  color: Name == "Tim" ? Color(0xFF818181):
-                  Name == "James"? Color(0xFFFF5F8F):
-                  Color(0xFF505050),
-                   
-                  fontStyle: Message == "Typing..."
-                      ? FontStyle.italic
-                      : FontStyle.normal,
-                  textStyle: const TextStyle(fontSize: 16),
-                ),
+            child: Text(
+              Message,
+              style: GoogleFonts.nunito(
+                color: Name == "Tim" ? const Color(0xFF818181):
+                Name == "James"? const Color(0xFFFF5F8F):
+                const Color(0xFF505050),
+                 
+                fontStyle: Message == "Typing..."
+                    ? FontStyle.italic
+                    : FontStyle.normal,
+                textStyle: const TextStyle(fontSize: 16),
               ),
             ),
           ), //for verification
@@ -122,7 +115,7 @@ class messages extends StatelessWidget {
             child: Text(
               Time,
               style: GoogleFonts.nunito(
-                  color: Name == "Tim" ? Color(0xFF818181): Color(0xFF505050),
+                  color: Name == "Tim" ? const Color(0xFF818181): const Color(0xFF505050),
                 textStyle: const TextStyle(fontSize: 12),
               ),
             ),
@@ -135,7 +128,7 @@ class messages extends StatelessWidget {
                   child: Container(
                     height: 17.h,
                     width: 17.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFF5F8F),
                       borderRadius: BorderRadius.all(
                         Radius.circular(44),
@@ -155,7 +148,7 @@ class messages extends StatelessWidget {
           Positioned.fill(
             bottom: -100, // to overlap the divider below
             child: Row(
-              children: [
+              children: const [
                 Expanded(
                   child: Divider(
                     indent: 30,

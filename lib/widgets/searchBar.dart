@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,7 +14,7 @@ class searchBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFFFFFFF),
               borderRadius: BorderRadius.all(
                 Radius.circular(42),
@@ -22,11 +24,11 @@ class searchBar extends StatelessWidget {
             width: 320.w,
             child: Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
+                const Padding(
+                  padding: EdgeInsets.only(left: 10),
                   child: Icon(
                     Icons.search,
-                    size: 40,
+                    size: 40,color: Color(0xFF999999),
                   ),
                 ),
                 Padding(
@@ -34,7 +36,7 @@ class searchBar extends StatelessWidget {
                   child: Text(
                     "Search",
                     style:
-                        GoogleFonts.nunito(textStyle: TextStyle(fontSize: 18),fontWeight: FontWeight.w400),
+                        GoogleFonts.nunito(textStyle: const TextStyle(fontSize: 18),fontWeight: FontWeight.w400,color: const Color(0xFF999999),),
                   ),
                 )
               ],

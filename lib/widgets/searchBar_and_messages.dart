@@ -1,6 +1,6 @@
+// ignore_for_file: file_names, camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'messages.dart';
@@ -11,15 +11,15 @@ class searchBarAndMessages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 383.5.h,
       width: double.infinity,
       child: Stack(
-        children: [
+        children: const [
           Positioned(
             top:30,
-            child: const messages()),
-          const searchBar(),
+            child: messages()),
+          searchBar(),
         ],
       ),
     );
