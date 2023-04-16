@@ -21,7 +21,6 @@ Widget listOfFriendsOnHomeScreen() {
             height: 110.h,
             width: 90.w,
             decoration: BoxDecoration(
-                color: Colors.amber,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             child: Stack(
               children: [
@@ -46,17 +45,33 @@ Widget listOfFriendsOnHomeScreen() {
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     child: Center(
-                      child: Text(
-                        NamesForHomeScreen[index],
-                        style: GoogleFonts.nunito(
-                          textStyle: TextStyle(
-                            fontSize: 12,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            NamesForHomeScreen[index],
+                            style: GoogleFonts.nunito(
+                              textStyle: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
                           ),
-                        ),
+                          index > 0
+                              ? Container(
+                                  height: 10.h,
+                                  margin: EdgeInsets.only(left: 5),
+                                  child: Image.asset(
+                                    "assets/icons/BlueTick.png",
+                                    fit: BoxFit.cover,
+                                  ),
+                                )
+                              : Container(),
+                        ],
                       ),
                     ),
                   ),
-                ), // this is for the name
+                ), 
               ],
             ),
           ),

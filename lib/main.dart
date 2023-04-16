@@ -1,4 +1,5 @@
 import 'package:find_flames_internship_application/screens/main_home_screen.dart';
+import 'package:find_flames_internship_application/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
           home: SafeArea(
             child: Scaffold(
               body: MainHomeScreen(),
+              bottomNavigationBar: BottomNavigationBarForHomeScreen(),
             ),
           ),
         );

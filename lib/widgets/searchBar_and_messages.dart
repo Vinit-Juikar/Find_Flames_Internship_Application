@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'messages.dart';
 import 'searchBar.dart';
@@ -10,11 +11,15 @@ class searchBarAndMessages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
+      height: 383.5.h,
+      width: double.infinity,
       child: Stack(
         children: [
-          searchBar(),
-          messages(),
+          Positioned(
+            top:30,
+            child: const messages()),
+          const searchBar(),
         ],
       ),
     );
