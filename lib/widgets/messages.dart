@@ -5,22 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class messages extends StatelessWidget {
-  Widget ContainerforMessages() {
-    return SizedBox(
-      height: 150.h,
-      width: ScreenUtil().screenWidth,
-      child: Row(
-        children: [
-          Container(
-            height: 130.h,
-            width: 100.h,
-            color: Colors.green,
-          )
-        ],
-      ),
-    );
-  }
-
   Widget DividerForMessages() {
     return Row(
       children: const [
@@ -140,7 +124,7 @@ class messages extends StatelessWidget {
                         Notification,
                         style: GoogleFonts.nunito(
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFFFFFFFF),
+                          color: const Color(0xFFFFFFFF),
                           textStyle: const TextStyle(fontSize: 12),
                         ),
                       ),
