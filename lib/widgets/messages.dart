@@ -5,25 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class messages extends StatelessWidget {
-  Widget DividerForMessages() {
-    return Row(
-      children: const [
-        Expanded(
-          child: Divider(
-            indent: 25,
-            thickness: 20.0,
-            height: 30,
-            color: Colors.black,
-          ),
-        ),
-        Expanded(
-          child: Divider(
-              endIndent: 25, thickness: 20.0, height: 30, color: Colors.black),
-        )
-      ],
-    );
-  }
-
+  
   Widget ContainerforPeopleWithVerifiedTick(
       String ImageForMessages,
       String Name,
