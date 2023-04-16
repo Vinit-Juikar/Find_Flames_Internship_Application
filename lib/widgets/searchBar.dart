@@ -15,6 +15,14 @@ class searchBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           child: Container(
             decoration: const BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  spreadRadius: 0.2,
+                  blurRadius: 0.4,
+                  offset: Offset(0, 1.5),
+                )
+              ],
               color: Color(0xFFFFFFFF),
               borderRadius: BorderRadius.all(
                 Radius.circular(42),
@@ -24,19 +32,25 @@ class searchBar extends StatelessWidget {
             width: 320.w,
             child: Row(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Icon(
-                    Icons.search,
-                    size: 40,color: Color(0xFF999999),
-                  ),
-                ),
+                Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Container(
+                        margin: EdgeInsets.only(left: 15, right: 10),
+                        height: 25.h,
+                        width: 25.w,
+                        child: Image.asset(
+                          "assets/images/search icon.png",
+                          fit: BoxFit.cover,
+                        ))),
                 Padding(
                   padding: const EdgeInsets.only(left: 8),
                   child: Text(
                     "Search",
-                    style:
-                        GoogleFonts.nunito(textStyle: const TextStyle(fontSize: 18),fontWeight: FontWeight.w400,color: const Color(0xFF999999),),
+                    style: GoogleFonts.nunito(
+                      textStyle: const TextStyle(fontSize: 18),
+                      fontWeight: FontWeight.w400,
+                      color: const Color(0xFF999999),
+                    ),
                   ),
                 )
               ],

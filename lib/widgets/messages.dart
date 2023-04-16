@@ -123,7 +123,7 @@ class messages extends StatelessWidget {
           Notification == ""
               ? Container()
               : Positioned(
-                  right: 45,
+                  right: 40,
                   top: 40,
                   child: Container(
                     height: 17.h,
@@ -138,6 +138,7 @@ class messages extends StatelessWidget {
                       child: Text(
                         Notification,
                         style: GoogleFonts.nunito(
+                          fontWeight: FontWeight.w700,color: Color(0xFFFFFFFF),
                           textStyle: const TextStyle(fontSize: 12),
                         ),
                       ),
