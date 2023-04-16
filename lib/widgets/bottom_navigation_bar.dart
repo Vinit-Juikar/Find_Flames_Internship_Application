@@ -17,7 +17,6 @@ class _BottomNavigationBarForHomeScreenState
     const Text(""),
     const Text(""),
     const Text(""),
-    // ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -38,8 +37,6 @@ class _BottomNavigationBarForHomeScreenState
             label: '',
             backgroundColor: Colors.white,
           ),
-          // Add your other bottom navigation items here
-
           BottomNavigationBarItem(
              icon: Image.asset("assets/images/global_earth_icon-removebg-preview.png",scale: 5,),
             label: '',
