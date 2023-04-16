@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar AppBarForHomeScreen() {
   return AppBar(
-    backgroundColor: Color(0xFFF5F5F5),
+    backgroundColor: Color(0xFFFFF6FA),
     toolbarHeight: 60.h,
     elevation: 0,
     title: Container(

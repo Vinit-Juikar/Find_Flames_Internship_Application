@@ -14,9 +14,9 @@ class _BottomNavigationBarForHomeScreenState
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const MainHomeScreen(),
-    const Text("Gauri Pompoo"),
-    const Text("Gauri Pompoo"),
-    const Text("Gauri Pompoo"),
+    const Text(""),
+    const Text(""),
+    const Text(""),
     // ProfileScreen(),
   ];
 
@@ -31,7 +31,7 @@ class _BottomNavigationBarForHomeScreenState
     return Scaffold(
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFFFFFFF),
         items: [
           BottomNavigationBarItem(
             icon: Image.asset("assets/images/image-removebg-preview.png",scale: 5,),
